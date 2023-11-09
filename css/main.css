@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import './reset.css';
+
+:root {
+    --container-width: 1270px;
+    --container-padding: 15px;
+    --color-muted: rgba(15, 31, 28, 0.5);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f6f6f6;
+    color: #0f1f1c;
+}
+
+.none {
+    display: none !important;
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+.container-right {
+    padding-left: calc(
+        (100% - var(--container-width)) / 2 + var(--container-padding)
+    );
+}
+
+.container-left {
+    padding-right: calc(
+        (100% - var(--container-width)) / 2 + var(--container-padding)
+    );
+}
+
+/*Header*/
+.header {
+    position: relative;
+    min-height: 940px;
+    padding-top: 44px;
+    background: linear-gradient(132deg, #428e5f -17.38%, #112120 78.4%), #204434;
+    color: #fff;
+}
+.header a {
+    color: #fff;
+}
+
+.header::after {
+    content: '';
+
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 96px;
+
+    background-image: url('./../img/header/header-bottom.svg');
+    background-size: 100%;
+}
+
+.header__top {
+    margin-bottom: 86px;
+}
+.header__content {
+    max-width: 592px;
+}
+
+/*Nav*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 80px; /*страховочный отступ между блоками*/
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 80px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav__list a {
+    position: relative;
+}
+
+.nav__list a.active::after,
+.nav__list a:hover::after {
+    content: '';
+
+    position: absolute;
+    left: 0px;
+    right: 10px;
+    bottom: -6px;
+    /* width: 35px; */
+    height: 4px;
+    border-radius: 100px;
+    background: #c4c4c4;
+    transition: all 0.3s ease-in;
+}
+
+.nav__login {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/*Logo*/
+
+.logo {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+.logo a {
+    color: inherit; /*наследует от родителя*/
+}
+
+/*Button*/
+
+.btn {
+    display: inline-block; /*ссылка - это инлайн элемент, не работают блочные свойства*/
+    padding: 13px 43px; /*ширину не задаем, чтоб кнопка могла расти*/
+
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+
+    background: linear-gradient(130deg, #ff7b4e 15.57%, #ff584e 95.03%), #fff;
+    border-radius: 100px;
+}
+.btn:hover {
+    filter: brightness(0.95);
+    transition: all 0.3s ease-in;
+}
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/*Header content*/
+
+.header__badge {
+    margin-bottom: 7px;
+    display: inline-block; /*чтобы размер был в пределах контента*/
+    padding: 11px 30px;
+    font-style: 18px;
+    font-weight: 500;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.25);
+}
+.header__title {
+    margin-bottom: 30px;
+    font-size: 55px;
+}
+.header__text {
+    margin-bottom: 68px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(255, 255, 255, 0.5);
+}
+.header__btn {
+}
