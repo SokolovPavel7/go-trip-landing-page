@@ -37,6 +37,7 @@ body {
 
 /*Header*/
 .header {
+    overflow: hidden;
     position: relative;
     min-height: 940px;
     padding-top: 44px;
@@ -62,9 +63,35 @@ body {
 
 .header__top {
     margin-bottom: 86px;
+    position: relative;
+    z-index: 1;
 }
+
+.header__row {
+    display: flex;
+}
+
 .header__content {
     max-width: 592px;
+    position: relative;
+    z-index: 1;
+}
+
+.header__img {
+    position: relative;
+    z-index: 0;
+    flex-grow: 1; /*чтобы пустой контейнер занимал всю свою ширину, т.к. картинка из него ушла в абсолют*/
+}
+
+.header__img img {
+    position: absolute;
+    top: -181px;
+    right: -87px;
+
+    max-width: unset; /*отменяем резет свойство 100% */
+    width: 894px;
+    height: 940px;
+   
 }
 
 /*Nav*/
@@ -134,8 +161,8 @@ body {
     border-radius: 100px;
 }
 .btn:hover {
-    filter: brightness(0.95);
-    transition: all 0.3s ease-in;
+    color: rgb(245, 233, 127);
+    transition: color 0.3s ease-in;
 }
 .btn:active {
     position: relative;
@@ -164,4 +191,18 @@ body {
     color: rgb(255, 255, 255, 0.5);
 }
 .header__btn {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 27px 48px;
+    border-radius: 27px;
+    background: linear-gradient(130deg, #ff7b4e 15.57%, #ff584e 95.03%);
+}
+.header__btn:hover {
+    color: rgb(245, 233, 127);
+    transition: color 0.3s ease-in;
+}
+.header__btn:active {
+    position: relative;
+    top: 1px;
 }
