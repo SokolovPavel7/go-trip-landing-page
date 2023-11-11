@@ -262,6 +262,8 @@ body {
 
 /*Slider*/
 .slider {
+    position: relative;
+    height: 456px;
 }
 
 .slider__item {
@@ -278,4 +280,32 @@ body {
     margin-top: 0;
     width: 380px;
     height: 456px;
+}
+
+.slider__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    display: block;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(130deg, #ff7b4e 15.57%, #ff584e 95.03%), #8b8b8b;
+
+    display: flex;
+    align-items: center;
+}
+.slider__btn--prev {
+    left: -27px;
+
+    padding-left: 26px;
+    justify-content: flex-start;
+}
+.slider__btn--next {
+    right: -27px;
+
+    padding-right: 26px;
+    justify-content: flex-end;
 }
