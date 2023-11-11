@@ -91,7 +91,6 @@ body {
     max-width: unset; /*отменяем резет свойство 100% */
     width: 894px;
     height: 940px;
-   
 }
 
 /*Nav*/
@@ -149,7 +148,7 @@ body {
 
 /*Button*/
 
-.btn {
+.nav__btn {
     display: inline-block; /*ссылка - это инлайн элемент, не работают блочные свойства*/
     padding: 13px 43px; /*ширину не задаем, чтоб кнопка могла расти*/
 
@@ -160,11 +159,11 @@ body {
     background: linear-gradient(130deg, #ff7b4e 15.57%, #ff584e 95.03%), #fff;
     border-radius: 100px;
 }
-.btn:hover {
+.nav__btn:hover {
     color: rgb(245, 233, 127);
     transition: color 0.3s ease-in;
 }
-.btn:active {
+.nav__btn:active {
     position: relative;
     top: 1px;
 }
@@ -205,4 +204,78 @@ body {
 .header__btn:active {
     position: relative;
     top: 1px;
+}
+
+/*Destinations*/
+.destinations {
+    padding: 96px 0 100px;
+    overflow-x: hidden; /*чтобы не было горизонтального скролла, когда уходит слайдер*/
+}
+
+.destinations__row {
+    display: flex;
+    column-gap: 49px;
+}
+.destinations__content {
+    max-width: 456px;
+}
+.destinations__slider {
+    width: 1110px;
+    flex-shrink: 0; /*чтобы ширина слайдера не уменьшалась, а уходила за горизонт*/
+}
+
+.destinations__title {
+    margin-bottom: 15px;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.destinations__title span {
+    font-size: 30px;
+}
+
+.destinations__text {
+    margin-bottom: 60px;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--color-muted);
+    /* width: 456px; */
+}
+
+.btn {
+    display: inline-block;
+    color: #fefefe;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 25px 45px;
+    border-radius: 27px;
+    background: linear-gradient(130deg, #ff7b4e 15.57%, #ff584e 95.03%);
+}
+.btn:hover {
+    color: rgb(245, 233, 127);
+    transition: color 0.3s ease-in;
+}
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/*Slider*/
+.slider {
+}
+
+.slider__item {
+    margin-top: 27px;
+    width: 335px;
+    height: 402px;
+    object-fit: cover; /*для корректного масштабирования*/
+    border-radius: 35px;
+
+    transition: 0.2s ease-in;
+}
+
+.slider .center .slider__item {
+    margin-top: 0;
+    width: 380px;
+    height: 456px;
 }
