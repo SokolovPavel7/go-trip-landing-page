@@ -147,7 +147,6 @@ body {
 }
 
 /*Button*/
-
 .nav__btn {
     display: inline-block; /*ссылка - это инлайн элемент, не работают блочные свойства*/
     padding: 13px 43px; /*ширину не задаем, чтоб кнопка могла расти*/
@@ -169,7 +168,6 @@ body {
 }
 
 /*Header content*/
-
 .header__badge {
     margin-bottom: 7px;
     display: inline-block; /*чтобы размер был в пределах контента*/
@@ -211,7 +209,6 @@ body {
     padding: 96px 0 100px;
     overflow-x: hidden; /*чтобы не было горизонтального скролла, когда уходит слайдер*/
 }
-
 .destinations__row {
     display: flex;
     column-gap: 49px;
@@ -223,17 +220,14 @@ body {
     width: 1110px;
     flex-shrink: 0; /*чтобы ширина слайдера не уменьшалась, а уходила за горизонт*/
 }
-
 .destinations__title {
     margin-bottom: 15px;
     font-size: 55px;
     font-weight: 600;
 }
-
 .destinations__title span {
     font-size: 30px;
 }
-
 .destinations__text {
     margin-bottom: 60px;
     font-size: 25px;
@@ -265,7 +259,6 @@ body {
     position: relative;
     height: 456px;
 }
-
 .slider__item {
     margin-top: 27px;
     width: 335px;
@@ -275,13 +268,11 @@ body {
 
     transition: 0.2s ease-in;
 }
-
 .slider .center .slider__item {
     margin-top: 0;
     width: 380px;
     height: 456px;
 }
-
 .slider__btn {
     position: absolute;
     top: 50%;
@@ -309,3 +300,60 @@ body {
     padding-right: 26px;
     justify-content: flex-end;
 }
+
+/*Customers*/
+.customers {
+    padding: 100px 0 133px;
+}
+.customers__row {
+    display: flex;
+    column-gap: 68px;
+}
+.customers__img {
+    max-width: 478px;
+}
+.customers__img img {
+    border-radius: 60px;
+}
+.customers__title {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+/*Review*/
+.review {
+    max-width: 490px;
+}
+.review__client {
+    display: flex;
+    align-items: center;
+    column-gap: 33px;
+    margin-bottom: 60px;
+}
+.review__client-avatar {
+    overflow: hidden;
+    width: 134px;
+    height: 134px;
+    border-radius: 50%;
+
+    background: #ff794e;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.review__client-desc-name {
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+.review__client-desc-country {
+    font-size: 25px;
+    color: var(--color-muted);
+}
+.review__text {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-muted);
+}
+
