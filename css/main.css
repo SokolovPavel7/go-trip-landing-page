@@ -29,7 +29,6 @@ body {
         (100% - var(--container-width)) / 2 + var(--container-padding)
     );
 }
-
 .container-left {
     padding-right: calc(
         (100% - var(--container-width)) / 2 + var(--container-padding)
@@ -61,26 +60,21 @@ body {
     background-image: url('./../img/header/header-bottom.svg');
     background-size: 100%;
 }
-
 .header__top {
     margin-bottom: 86px;
     position: relative;
 }
-
 .header__row {
     display: flex;
 }
-
 .header__content {
     max-width: 592px;
     position: relative;
 }
-
 .header__img {
     position: relative;
     flex-grow: 1; /*чтобы пустой контейнер занимал всю свою ширину, т.к. картинка из него ушла в абсолют*/
 }
-
 .header__img img {
     position: absolute;
     pointer-events: none;
@@ -90,6 +84,19 @@ body {
     max-width: unset; /*отменяем резет свойство 100% */
     width: 894px;
     height: 940px;
+}
+.header__img::after {
+    content: '';
+
+    position: absolute;
+    left: -145px;
+    top: -10px;
+    width: 830px;
+    height: 622px;
+
+    background-image: url('./../img/header/header-elements.svg');
+    background-repeat: no-repeat;
+    pointer-events: none;
 }
 
 /*Nav*/
@@ -130,7 +137,6 @@ body {
 .nav__list.nav__list--footer a:hover {
     color: var(--orange);
 }
-
 .nav__login {
     display: flex;
     align-items: center;
@@ -138,7 +144,9 @@ body {
     font-size: 15px;
     font-weight: 500;
 }
-
+.nav__toggle {
+    display: none;
+}
 /*Logo*/
 .logo {
     color: #fff;
@@ -430,4 +438,76 @@ body {
     padding: 36px 86px;
     font-size: 25px;
     border-radius: 35px;
+}
+/*Menu Icon*/
+.menu-icon-wrapper {
+    /*   background: red; */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-icon {
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+}
+.menu-icon::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+.menu-icon::after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+.menu-icon.menu-icon-active {
+    background-color: transparent;
+}
+.menu-icon.menu-icon-active::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+.menu-icon.menu-icon-active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+/*Media*/
+@media (max-width: 1269px) {
+    .container-right {
+        padding-left: 15px;
+    }
+    .container-left {
+        padding-right: 15px;
+    }
+    .header__img::after {
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    .nav__list {
+        display: none;
+    }
+    .nav__login {
+        display: none;
+    }
+    .nav__toggle {
+        display: block;
+    }
 }
