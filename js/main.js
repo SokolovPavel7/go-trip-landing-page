@@ -19,7 +19,10 @@ $('.slider__btn--next').click(function () {
 //Nav Icon
 const navBtn = document.querySelector('.nav__toggle');
 const menuIcon = document.querySelector('.menu-icon');
+const nav = document.querySelector('.nav');
 
 navBtn.onclick = function () {
     menuIcon.classList.toggle('menu-icon-active');
+    nav.classList.toggle('nav--mobile');
+    document.body.classList.toggle('no-scroll');
 };
