@@ -690,6 +690,37 @@ body {
         max-width: 300px;
         border-radius: 40px;
     }
+    /*Cta*/
+    .cta {
+        padding: 50px 0;
+    }
+    .cta__title {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .cta__text {
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+    .cta__plate {
+        min-height: 380px;
+        padding: 20px 15px;
+        border-radius: 40px;
+    }
+    .cta__plate::after {
+        display: none;
+    }
+    /*Subscribe*/
+    .subscribe {
+        padding: 25px 0 30px;
+    }
+    .subscribe__title {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .subscribe-form {
+        column-gap: 85px;
+    }
 }
 @media (max-width: 460px) {
     .nav--mobile .nav__toggle {
@@ -699,5 +730,9 @@ body {
     .nav--mobile .nav__list,
     .nav--mobile .nav__login {
         row-gap: 20px;
+    }
+    .cta__plate::before {
+        left: 13px;
+        bottom: 25px;
     }
 }
