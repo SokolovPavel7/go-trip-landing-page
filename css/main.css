@@ -426,7 +426,7 @@ body {
     position: relative;
     top: 1px;
 }
-.btn--lodin {
+.btn--login {
     font-size: 15px;
     font-weight: 500;
     border-radius: 100px;
@@ -507,11 +507,17 @@ body {
     }
 }
 @media (max-width: 1000px) {
-    .nav__list {
+    .nav__list--header {
         display: none;
     }
-    .nav__login {
+    .nav__login--header {
         display: none;
+    }
+    .nav {
+        column-gap: 50px;
+    }
+    .nav__list {
+        column-gap: 50px;
     }
     .nav__toggle {
         display: block;
@@ -652,6 +658,12 @@ body {
         border-radius: 20px;
         font-size: 18px;
     }
+    .btn--login {
+        padding: 13px 44px;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 100px;
+    }
     /*Customers*/
     .customers {
         padding: 50px 0 60px;
@@ -720,6 +732,16 @@ body {
     }
     .subscribe-form {
         column-gap: 85px;
+    }
+    /*Footer*/
+    .nav__login--footer {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .nav--footer {
+        flex-direction: column-reverse;
+        row-gap: 30px;
     }
 }
 @media (max-width: 460px) {
