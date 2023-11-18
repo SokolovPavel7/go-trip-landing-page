@@ -4,18 +4,19 @@ owl.owlCarousel({
     center: true,
     loop: true,
     margin: 20,
-    startPosition: 1, //если луп не включен, то эта настройка поставить центральную карточку на вторую позицию
-    item: 3, //три слайда на экране
+    startPosition: 0, //если луп не включен, то эта настройка поставит центральную карточку на вторую позицию
+    items: 1, //один слайд на смартфонах
     responsive: {
-        850: {
+        540: {
+            items: 3,
             startPosition: 1,
-            item: 3,
         },
-        1000: {
-            margin: 20,
-            item: 3,
+        850: {
+            items: 3,
+            startPosition: 1,
         },
         1200: {
+            items: 3,
             margin: 30,
         },
     },

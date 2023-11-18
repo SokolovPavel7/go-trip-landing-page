@@ -216,6 +216,10 @@ body {
 }
 
 /*Slider*/
+.owl-item {
+    display: flex;
+    justify-content: center;
+}
 .slider {
     position: relative;
     height: 456px;
@@ -589,6 +593,7 @@ body {
     .container-right {
         padding-right: 15px;
     }
+    /*Header*/
     .header {
         padding-top: 20px;
         min-height: unset;
@@ -664,13 +669,13 @@ body {
         font-weight: 500;
         border-radius: 100px;
     }
+
     /*Customers*/
     .customers {
         padding: 50px 0 60px;
     }
     .customers__row {
-        flex-direction: column-reverse;
-        row-gap: 30px;
+        column-gap: 30px;
     }
     .customers__title {
         margin-bottom: 25px;
@@ -699,9 +704,10 @@ body {
         max-width: 200px;
     }
     .customers__img {
-        max-width: 300px;
+        max-width: 250px;
         border-radius: 40px;
     }
+
     /*Cta*/
     .cta {
         padding: 50px 0;
@@ -722,6 +728,7 @@ body {
     .cta__plate::after {
         display: none;
     }
+
     /*Subscribe*/
     .subscribe {
         padding: 25px 0 30px;
@@ -731,13 +738,26 @@ body {
         margin-bottom: 30px;
     }
     .subscribe-form {
-        column-gap: 85px;
+        column-gap: 10px;
+        padding: 10px 12px 10px 20px;
+        border-radius: 25px;
     }
+    .subscribe-form__input {
+        font-size: 20px;
+    }
+
     /*Footer*/
     .nav__login--footer {
         display: none;
     }
 }
+@media (max-width: 640px) {
+    .customers__row {
+        flex-direction: column-reverse;
+        row-gap: 30px;
+    }
+}
+
 @media (max-width: 600px) {
     .nav--footer {
         flex-direction: column-reverse;
@@ -745,6 +765,29 @@ body {
     }
 }
 @media (max-width: 460px) {
+    .customers__img img {
+        max-width: 100%;
+    }
+    .cta__plate::before {
+        display: none;
+    }
+    .subscribe-form {
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 10px;
+    }
+    .subscribe-form__input {
+        padding: 15px 0;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        font-size: 18px;
+    }
+    .nav__list--footer {
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: center;
+    }
     .nav--mobile .nav__toggle {
         top: 20px;
         right: 20px;
@@ -752,9 +795,5 @@ body {
     .nav--mobile .nav__list,
     .nav--mobile .nav__login {
         row-gap: 20px;
-    }
-    .cta__plate::before {
-        left: 13px;
-        bottom: 25px;
     }
 }
